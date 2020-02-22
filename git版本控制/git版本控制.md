@@ -49,8 +49,17 @@ git config --global user.name "your name"
 ## git回滚
 
 ```python
-git reset --hard 版本号
+回滚至之前版本
+"""
+git log
+git reset --hard 版本号  
+"""
 
+回滚至之后版本
+"""
+git reflog
+git reset --hard 版本号
+"""
 ```
 
 ## git命令
@@ -72,5 +81,17 @@ git commit -m '描述'
 # 查看版本记录
 git log
 git reflog
+
+# 版本回滚
+git reset --hard 版本号
+
+# 暂存区 回撤至 未暂存状态
+git reset HEAD 文件名
+
+# 未暂存状态 回撤至 未修改状态
+git checkout  -- 文件名
+
+# 版本库  回撤至 暂存区状态
+git reset --soft 版本号
 ```
 
