@@ -40,9 +40,18 @@ git config --global user.name "your name"
     git status 
 ```
 
+## git三大区域
 
+```python
+工作区, 暂存区, 版本库
+```
 
+## git回滚
 
+```python
+git reset --hard 版本号
+
+```
 
 ## git命令
 
@@ -53,14 +62,15 @@ git init
 # 检测当前文件夹下的文件状态
 git status
 
-# 管理文件或文件夹
+# 管理文件或文件夹   提交到暂存区
 git add 文件名或文件夹名
 git add .      # 将文件夹下所有的文件都管理起来
 
-# 生成版本
+# 生成版本  提交到版本库
 git commit -m '描述'
 
 # 查看版本记录
 git log
+git reflog
 ```
 
