@@ -62,6 +62,24 @@ git reset --hard 版本号
 """
 ```
 
+## git分支
+
+```python
+git branch 分支名    创建新分支
+git checkout dev    切换到新分支
+git branch -d  分支名  删除分支
+```
+
+## git合并
+
+```python
+git checkout master    切换回master
+git merge 分支名        合并分支
+有冲突的话就手动解决冲突,然后在add和commit
+```
+
+
+
 ## git命令
 
 ```python
@@ -92,6 +110,12 @@ git reset HEAD 文件名
 git checkout  -- 文件名
 
 # 版本库  回撤至 暂存区状态
-git reset --soft 版本号
+git reset --soft 版本号  ???
+
+# 查看当前分支名
+git branch
+
+# 创建新分支
+git branch 分支名
 ```
 
