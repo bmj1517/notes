@@ -13,5 +13,6 @@ git push -u origin master       # 推送到github, origin是别名,可以自己�
 
 ```python
 git clone 地址    # 克隆仓库,仅第一次时需要
+git pull origin master    # 拉取master分支
 ```
 
