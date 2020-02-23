@@ -85,6 +85,47 @@ git merge 分支名        合并分支
 	--dev(开发版)--c2---c3    分支
 ```
 
+## git rebase(变基)
+
+可以使git提交记录变得更简洁
+
+注: 合并记录时,不要和已push到云端仓库的版本合并
+
+```python
+场景一
+git rebase -i HEAD~3    # 从当前开始合并之前的三条记录里
+
+场景二
+把dev分支记录合并到master上
+git checkout dev   # 先切换到dev分支
+git rebase master  # 变基
+git checkout master # 再切换到master分支
+git merge dev  # 合并
+
+场景三
+git fetch origin dev 
+git rebase origin/dev
+
+
+如果rebase过程中遇到了冲突
+1.先解决冲突
+2.git add
+3.git rebase --continue
+
+```
+
+## 快速解决冲突
+
+```python
+1.安装beyond compare
+2.在git 中配置
+	git config --local merge.tool bc3
+    git config --local mergetool.path 'usr/local/bin/bcomp'
+    git config --local mergetool.keepBackup false
+3.应用beyond compare 解决冲突
+	git mergetool
+```
+
 
 
 ## git命令
@@ -124,5 +165,9 @@ git branch
 
 # 创建新分支
 git branch 分支名
+
+# 记录的图形展示
+git log --graph
+git log --graph --pretty=format:"%h %s"
 ```
 
