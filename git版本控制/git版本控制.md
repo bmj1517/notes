@@ -126,6 +126,18 @@ git rebase origin/dev
 	git mergetool
 ```
 
+## gitignore忽略文件
+
+```python
+让git不在管理当前目录下的某些文件
+创建 .gitignore 的文件
+	"""
+	*.h    不管理以.h结尾的文件
+	!a.h   除了 a.h
+	abc/   不管理abc文件夹下的文件
+	"""
+```
+
 
 
 ## git命令
@@ -169,5 +181,8 @@ git branch 分支名
 # 记录的图形展示
 git log --graph
 git log --graph --pretty=format:"%h %s"
+    
+# 添加标签
+git tag -a v1 -m '第一版项目'
 ```
 
